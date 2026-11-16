@@ -117,34 +117,32 @@ function convertToRomanNumerals(num) {
   let remainder = num;
 
   while (remainder >= 10) {
-    result = result + 'X';
-    remainder = remainder - 10;
+    result += 'X';
+    remainder -= 10;
   }
 
   if (remainder === 9) {
-    result = result + 'IX';
-    remainder = remainder - 9;
+    result += 'IX';
+    remainder -= 9;
   }
 
   if (remainder >= 5) {
-    result = result + 'V';
-    remainder = remainder - 5;
+    result += 'V';
+    remainder -= 5;
   }
 
   if (remainder === 4) {
-    result = result + 'IV';
-    remainder = remainder - 4;
+    result += 'IV';
+    remainder -= 4;
   }
 
   while (remainder >= 1) {
-    result = result + 'I';
-    remainder = remainder - 1;
+    result += 'I';
+    remainder -= 1;
   }
 
   return result;
 }
-
-
 
 /**
  * Converts a number to a string, replacing digits with words.
